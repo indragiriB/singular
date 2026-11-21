@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Music2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -11,6 +11,10 @@ interface ArtworkProps {
 
 export function Artwork({ src, alt, className, iconClassName }: ArtworkProps) {
   const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    setFailed(false)
+  }, [src])
 
   if (!src || failed) {
     return (
