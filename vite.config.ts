@@ -18,9 +18,12 @@ export default defineConfig(({ mode }) => ({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
+        id: './',
         name: 'Singular',
         short_name: 'Singular',
         description: 'Musik tanpa iklan dari Audius dan Internet Archive.',
+        lang: 'id',
+        categories: ['music', 'entertainment'],
         theme_color: '#FF2E2E',
         background_color: '#F3F3F5',
         display: 'standalone',
